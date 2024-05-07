@@ -16,25 +16,25 @@ class TweetSeeder extends Seeder
     {
         Tweet::create([
             "user_id"=>2,
-            "content"=>SelfFunction::random_content(),
+            "content"=>SelfFunction::random_content(100),
             "tweet_image"=>null,
             "tweet_video"=>null,
         ]);
         Tweet::create([
             "user_id"=>1,
-            "content"=>SelfFunction::random_content(),
+            "content"=>SelfFunction::random_content(100),
             "tweet_image"=>null,
             "tweet_video"=>null,
         ]);
         Tweet::create([
             "user_id"=>2,
-            "content"=>SelfFunction::random_content(),
+            "content"=>SelfFunction::random_content(100),
             "tweet_image"=>null,
             "tweet_video"=>null,
         ]);
         Tweet::create([
             "user_id"=>1,
-            "content"=>SelfFunction::random_content(),
+            "content"=>SelfFunction::random_content(100),
             "tweet_image"=>null,
             "tweet_video"=>null,
         ]);
