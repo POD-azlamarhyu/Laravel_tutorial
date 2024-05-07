@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use App\Models\Tweet;
 use App\Models\UserInfo;
 use App\Models\Favorite;
+use App\Models\ChatRoom;
+use App\Models\ChatroomBelongUser;
 
 class User extends Authenticatable
 {
@@ -60,5 +62,13 @@ class User extends Authenticatable
 
     public function favorite() :HasMany{
         return $this->hasMany(Favorite::class);
+    }
+
+    public function chatroom() :HasMany{
+        return $this->hasMany(ChatRoom::class);
+    }
+
+    public function chatroom_belong_user() :HasMany{
+        return $this->hasMany(ChatroomBelongUser::class);
     }
 }
