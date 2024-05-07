@@ -37,6 +37,8 @@ Route::delete('/tweet/tweet_delete/{tweet_id}',[TweetController::class,"delete"]
 Route::post('/favorite/tweet',[FavoriteController::class,"toggle_favorite"])->middleware('auth:sanctum');
 Route::get('/favorite/tweet_favorite_count',[FavoriteController::class,"tweet_favorite_count"])->middleware('auth:sanctum');
 Route::get('/favorite/favorite_tweets',[FavoriteController::class,"favorite_tweets"])->middleware('auth:sanctum');
+Route::get('/favorit/tweet/tweet_prof',[FavoriteController::class,"favorite_tweets_with_prof"])->middleware('auth:sanctum');
+Route::get('/favorit/tweet/tweet_prof/favorite_number/',[FavoriteController::class,"favorite_tweets_with_prof_favnumber"])->middleware('auth:sanctum');
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();

@@ -125,5 +125,6 @@ return [
 
     'aliases' =>[
         'SelfFunction' => \App\Lib\SelfFunction::class,
+        'SeedingFunction' => App\Lib\SeedingFunction::class,
     ],
 ];
