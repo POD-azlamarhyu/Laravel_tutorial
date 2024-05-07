@@ -111,3 +111,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 `curl --request DELETE http://localhost/api/tweet/delete/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
 `curl --request DELETE http://localhost/api/tweet/delete/6/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
+
+### Favorite
+
+#### template
+
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
+
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof/favorite_number -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
+
+
+#### actual
+
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
+
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof/favorite_number -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`

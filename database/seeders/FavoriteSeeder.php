@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Lib\SeedingFunction;
 use App\Models\Favorite;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,6 +22,13 @@ class FavoriteSeeder extends Seeder
         {
             Favorite::create([
                 "user_id"=>User::inRandomOrder()->first()->id,
+                "tweet_id"=>Tweet::inRandomOrder()->first()->id,
+            ]);
+        }
+
+        for($i=1;$i<50;$i++){
+            Favorite::create([
+                "user_id"=>SeedingFunction::create_favorite_user_id(),
                 "tweet_id"=>Tweet::inRandomOrder()->first()->id,
             ]);
         }
