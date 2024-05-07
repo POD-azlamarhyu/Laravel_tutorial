@@ -123,6 +123,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 #### actual
 
-`curl --request GET http://localhost/api/favorit/tweet/tweet_prof -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer 2|KjMZDX5EWtmYe5DZxHVBZnfmlWBRr83n11lsdbK9102c27e2' -d '{}'`
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
-`curl --request GET http://localhost/api/favorit/tweet/tweet_prof/favorite_number -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer 2|KjMZDX5EWtmYe5DZxHVBZnfmlWBRr83n11lsdbK9102c27e2' -d '{}'`
+`curl --request GET http://localhost/api/favorit/tweet/tweet_prof/favorite_number -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
