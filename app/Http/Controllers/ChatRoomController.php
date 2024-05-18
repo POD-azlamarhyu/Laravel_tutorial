@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ChatRoom;
+use App\Models\ChatroomBelongUser;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,10 +13,15 @@ class ChatRoomController extends Controller
     public function store(Request $request)
     {
         $user_id = Auth::id();
-        ChatRoom::create([
+        $chatroom = ChatRoom::create([
             "user_id"=>$user_id,
             "chatroom_name"=>$request->chatroom_name,
             "description"=>$request->description,
+        ]);
+        echo $chatroom;
+        ChatroomBelongUser::create([
+            "room_id"=>$chatroom->id,
+            "user_id"=>$chatroom->user_id
         ]);
     }
 
