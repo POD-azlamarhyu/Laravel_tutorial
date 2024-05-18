@@ -71,4 +71,9 @@ class User extends Authenticatable
     public function chatroom_belong_user() :HasMany{
         return $this->hasMany(ChatroomBelongUser::class);
     }
+
+    public function message() :HasMany
+    {
+        return $this->hasMany(Message::class);
+    }
 }
