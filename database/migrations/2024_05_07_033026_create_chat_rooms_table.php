@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
+use App\Lib\SelfFunction;
 
 return new class extends Migration
 {
@@ -14,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('chat_rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('room_code')->nullable()->default(Str::random(8));
+            $table->string('room_code')->nullable()->default(SelfFunction::get_random_code());
             $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('chatroom_name')->nullable()->default('myroom');
             $table->text('description')->nullable();

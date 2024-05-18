@@ -102,11 +102,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 `curl --request GET http://localhost/api/tweet/tweet_detail/1/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
 
-`curl --request POST http://localhost/api/tweet/post/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"おまんこいくいく69"}'`
+`curl --request POST http://localhost/api/tweet/post/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"お○んこいくいく69"}'`
 
 `curl --request POST http://localhost/api/tweet/post/ -H 'Authorization: Bearer ' -F "content=おまんこいくいく69" -F "image_file=@/home/ride-bigwave-niki/Pictures/sozai/OK.png"`
 
-`curl --request PUT http://localhost/api/tweet/update/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"おまんこいくいく69 いくぅーーーーーーーーーー！！"}'`
+`curl --request PUT http://localhost/api/tweet/update/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"お○んこいくいく69 いくぅーーーーーーーーーー！！"}'`
 
 `curl --request DELETE http://localhost/api/tweet/delete/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
