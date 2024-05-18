@@ -33,17 +33,33 @@ class ChatRoomController extends Controller
     public function update(Request $request,$room_id)
     {
         $user_id = Auth::id();
-        $chatroom = ChatRoom::where("id",$room_id)->first();
-        $chatroom->update([
-            "chatroom_name"=>$request->chatroom_name,
-            "description"=>$request->description,
-        ]);
+        
+        try{
+            $chatroom = ChatRoom::where("id",$room_id)->where("user_id",$user_id)->first();
+            $chatroom->update([
+                "chatroom_name"=>$request->chatroom_name,
+                "description"=>$request->description,
+            ]);
+
+            return response()->json([
+                "result"=>"success",
+                "message"=>"updated chatroom."
+            ],200);
+        }catch(Exception $ex){
+            echo $ex;
+
+            return response()->json([
+                "result"=>"failed",
+                "message"=>"doesnot update chatroom."
+            ],400);
+        }
     }
 
     public function delete(Request $request,$room_id)
-    {
+    {   
+        $user_id = Auth::id();
         try{
-            $chatroom=ChatRoom::where("id",$room_id)->first();
+            $chatroom=ChatRoom::where("id",$room_id)->where("user_id",$user_id)->first();
 
             $chatroom->delete();
             return response()->json([
@@ -55,7 +71,7 @@ class ChatRoomController extends Controller
 
             return response()->json([
                 "result"=>"failed",
-                "message"=>"doesnot delete tweet."
+                "message"=>"doesnot delete chatroom."
             ],400);
         }
     }
