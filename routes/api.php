@@ -48,8 +48,8 @@ Route::delete('/chatroom/update',[ChatRoomController::class,"delete"])->middlewa
 Route::get('/chatroom/detail',[ChatRoomController::class,'chatroom_detail'])->middleware('auth:sanctum');
 
 Route::post('/chatroom/belongsto/user/index',[ChatroomBelongUserController::class,"chatroom_belongs_index"])->middleware('auth:sanctum');
-Route::get('/chatroom/index',[ChatroomBelongUserController::class,"index"])->middleware('auth:sanctum');
-Route::post('/chatroom/enter_leave_toggles',[ChatroomBelongUserController::class,"entrance_leave_rooms"])->middleware('auth:sanctum');
+Route::get('/chatroom/belonguser/index',[ChatroomBelongUserController::class,"index"])->middleware('auth:sanctum');
+Route::post('/chatroom/belonguser/enter_leave_toggles',[ChatroomBelongUserController::class,"entrance_leave_rooms"])->middleware('auth:sanctum');
 
 Route::post('/directmessage/create',[MessageController::class,"store"])->middleware('auth:sanctum');
 Route::get('/directmessage/get',[MessageController::class,"show"])->middleware('auth:sanctum');
