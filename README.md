@@ -75,11 +75,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 `curl --request POST http://localhost/api/auth/logout -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'Authorization: Bearer '`
 
-`curl --request POST http://localhost/api/auth/signup -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"name":"mankomanko","email":"manko.chinko@example.com","password":"mankochinko10"}'`
+`curl --request POST http://localhost/api/auth/signup -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"name":"","email":"","password":""}'`
 
-`curl --request POST http://localhost/api/auth/login -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"email":"world@example.com","password":"unko1unko1"}'`
+`curl --request POST http://localhost/api/auth/login -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"email":"","password":""}'`
 
-`curl --request POST http://localhost/api/auth/login -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"email":"hello@example.com","password":"password1"}'`
+`curl --request POST http://localhost/api/auth/login -H 'Accept: application/json' -H "Content-Type: application/json" -d '{"email":"","password":""}'`
 
 ### User info
 
@@ -87,11 +87,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 `curl --request GET http://localhost/api/userinfo/myuser -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
-`curl --request POST http://localhost/api/userinfo/create -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"mankomanko","icon":"","user_bio":"unkounkounkoああああああああああああああああ","account_id":"fzi38fh2skfa"}'`
+`curl --request POST http://localhost/api/userinfo/create -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"","icon":"","user_bio":"","account_id":""}'`
 
-`curl --request DELETE http://localhost/api/userinfo/delete/4 -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"nonomurataro","icon":null,"user_bio":"orehane!! deyuhaha!! aaaaaaaaaaaaaaaaaaaaaaaaa","account_id":"kinosaki"}'`
+`curl --request DELETE http://localhost/api/userinfo/delete/4 -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"","icon":,"user_bio":"","account_id":""}'`
 
-`curl --request PUT http://localhost/api/userinfo/update/4 -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"nonomurataro","icon":null,"user_bio":"orehane!! deyuhaha!! aaaaaaaaaaaaaaaaaaaaaaaaa","account_id":"kinosaki"}'`
+`curl --request PUT http://localhost/api/userinfo/update/4 -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"account_name":"","icon":,"user_bio":"","account_id":""}'`
 
 ### Tweet
 
@@ -102,11 +102,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 `curl --request GET http://localhost/api/tweet/tweet_detail/1/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
 
-`curl --request POST http://localhost/api/tweet/post/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"お○んこいくいく69"}'`
+`curl --request POST http://localhost/api/tweet/post/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":""}'`
 
-`curl --request POST http://localhost/api/tweet/post/ -H 'Authorization: Bearer ' -F "content=おまんこいくいく69" -F "image_file=@/home/ride-bigwave-niki/Pictures/sozai/OK.png"`
+`curl --request POST http://localhost/api/tweet/post/ -H 'Authorization: Bearer ' -F "content=" -F "image_file=@/home/xxx.jpeg"`
 
-`curl --request PUT http://localhost/api/tweet/update/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":"お○んこいくいく69 いくぅーーーーーーーーーー！！"}'`
+`curl --request PUT http://localhost/api/tweet/update/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{"content":""}'`
 
 `curl --request DELETE http://localhost/api/tweet/delete/3/ -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
@@ -126,3 +126,54 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 `curl --request GET http://localhost/api/favorit/tweet/tweet_prof -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
 
 `curl --request GET http://localhost/api/favorit/tweet/tweet_prof/favorite_number -H 'Accept: application/json' -H "Content-Type: application/json" -H 'Authorization: Bearer ' -d '{}'`
+
+
+
+## Bibbiography
+
+## env
+
+- [Laravel Sail(public)](https://laravel.com/docs/11.x/sail)
+- [【Laravel入門】Laravel sailとは？Laravel sailで環境構築までしてみる](https://qiita.com/takegons/items/644dd262801244af769f)
+
+### command
+
+- [Laravel の make:model をいい感じに使いたい](https://qiita.com/niisan-tokyo/items/9c799989cb535489f201)
+- [【Laravel】「 php artisan make:model 」コマンドのオプション解説](https://qiita.com/Masahiro111/items/f6201b1e89fb6cfddc09)
+- [Artisanコマンド（早見表）](https://laraweb.net/environment/899/)
+- [よく使うLaravel artisan コマンド](https://zenn.dev/hdmt/scraps/e20979a31a73da)
+- [Laravel artisan コマンド](https://qiita.com/ryocha12/items/2c15ad2377c36dfcf408)
+
+### Model
+
+- [Database: Getting Started](https://laravel.com/docs/11.x/database)
+- [Database: Query Builder](https://laravel.com/docs/11.x/queries)
+- [Database: Migrations](https://laravel.com/docs/11.x/migrations)
+- [Eloquent: Getting Started](https://laravel.com/docs/11.x/eloquent)
+- [Eloquent: Relationships](https://laravel.com/docs/11.x/eloquent-relationships)
+- [Eloquent: Factories](https://laravel.com/docs/11.x/eloquent-factories)
+- [Database: Seeding](https://laravel.com/docs/11.x/seeding)
+- [【DB設計】DM機能実装のためのDB設計で大苦戦した初心者の話](https://qiita.com/Yuzaburo/items/22435b470688eedb4530)
+- [Laravel Eloquentのパフォーマンスを上げるために](https://zenn.dev/yum3/articles/t_laravel_eloquent_performance)
+- [【Laravel】Eloquentで多対多のリレーションを使い倒す](https://qiita.com/fujita-goq/items/afd4307e90daf95c4f14)
+- [酷すぎる自分のSQL（Laravel query builder）をリファクタした。](https://zenn.dev/kome471/articles/d69a1b09fc86c5)
+
+### View
+
+- [View](https://laravel.com/docs/11.x/views)
+- [HTTP Reponses](https://laravel.com/docs/11.x/responses)
+- [Laravelでログイン画面までを作る(CRUD）](https://qiita.com/EasyCoder/items/150f20a8b5270f1e7992)
+- [はじめてのLaravelアプリケーションガイド](https://qiita.com/Fendo181/items/dece727ea402552fee19)
+- [Laravel+React でWebアプリを構築する [使用技術: Laravel Sail, Laravel Breeze, Inertia, TailwindCss, Vite]](https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f)
+
+### Controllers
+
+- [Controllers](https://laravel.com/docs/11.x/controllers)
+- [Laravel基本的な流れ④ ControllerとRoutingの基本を抑えよう。](https://qiita.com/taisuke-m/items/e188abe6c63f0f9bb051)
+- [laravelのコントローラの書き方](https://zenn.dev/mo_ri_regen/articles/laravel-contoller)
+- [【Laravel】コントローラーとは？作成や編集方法を実例で解説。](https://qiita.com/shizen-shin/items/2ddb0748cdca1867440c)
+
+
+### Routing
+
+- [Routing](https://laravel.com/docs/11.x/routing)
