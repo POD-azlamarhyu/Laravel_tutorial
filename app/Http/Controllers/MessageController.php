@@ -88,6 +88,17 @@ class MessageController extends Controller
         ],200);
     }
 
+    public function message_detail(Request $request, $message_id)
+    {
+        $user_id = Auth::id();
+        $message = DB::table("messages")
+            ->where("id",$message_id)
+            ->first();
+        return response()->json([
+            "status"=>"success",
+            "data"=> $message
+        ],200);
+    }
     public function delete(Request $request,$message_id)
     {
         $message = Message::where("id",$message_id)->first();

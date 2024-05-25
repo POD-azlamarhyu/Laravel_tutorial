@@ -12,17 +12,25 @@ class ChatRoomController extends Controller
 {
     public function store(Request $request)
     {
-        $user_id = Auth::id();
-        $chatroom = ChatRoom::create([
-            "user_id"=>$user_id,
-            "chatroom_name"=>$request->chatroom_name,
-            "description"=>$request->description,
-        ]);
-        echo $chatroom;
-        ChatroomBelongUser::create([
-            "room_id"=>$chatroom->id,
-            "user_id"=>$chatroom->user_id
-        ]);
+        try{
+            $user_id = Auth::id();
+            $chatroom = ChatRoom::create([
+                "user_id"=>$user_id,
+                "chatroom_name"=>$request->chatroom_name,
+                "description"=>$request->description,
+            ]);
+            echo $chatroom;
+            ChatroomBelongUser::create([
+                "room_id"=>$chatroom->id,
+                "user_id"=>$chatroom->user_id
+            ]);
+        }catch(Exception $e){
+            echo $e->getMessage();
+            return response()->json([
+                "status"=> "failed.",
+                "message"=> "failed to create."
+            ]);
+        }
     }
 
     public function show(Request $request)
@@ -34,6 +42,17 @@ class ChatRoomController extends Controller
             "result"=>"success",
             "data"=>$rooms,
         ],200);
+    }
+    
+    public function chatroom_detail(Request $request)
+    {
+        $user_id = Auth::id();
+        $chatroom_detail=ChatRoom::where("user_id",$user_id)->first();
+
+        return response()->json([
+            "result"=> "success",
+            "data"=>$chatroom_detail,
+        ]);
     }
 
     public function update(Request $request,$room_id)

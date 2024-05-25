@@ -38,12 +38,14 @@ Route::delete('/tweet/tweet_delete/{tweet_id}',[TweetController::class,"delete"]
 Route::post('/favorite/tweet',[FavoriteController::class,"toggle_favorite"])->middleware('auth:sanctum');
 Route::get('/favorite/tweet_favorite_count',[FavoriteController::class,"tweet_favorite_count"])->middleware('auth:sanctum');
 Route::get('/favorite/favorite_tweets',[FavoriteController::class,"favorite_tweets"])->middleware('auth:sanctum');
-Route::get('/favorit/tweet/tweet_prof',[FavoriteController::class,"favorite_tweets_with_prof"])->middleware('auth:sanctum');
-Route::get('/favorit/tweet/tweet_prof/favorite_number/',[FavoriteController::class,"favorite_tweets_with_prof_favnumber"])->middleware('auth:sanctum');
+Route::get('/favorite/tweet/tweet_prof',[FavoriteController::class,"favorite_tweets_with_prof"])->middleware('auth:sanctum');
+Route::get('/favorite/tweet/tweet_prof/favorite_number/',[FavoriteController::class,"favorite_tweets_with_prof_favnumber"])->middleware('auth:sanctum');
+
 Route::post('/chatroom/create',[ChatRoomController::class,"store"])->middleware('auth:sanctum');
 Route::get('/chatroom/index',[ChatRoomController::class,"show"])->middleware('auth:sanctum');
 Route::put('/chatroom/update',[ChatRoomController::class,"update"])->middleware('auth:sanctum');
 Route::delete('/chatroom/update',[ChatRoomController::class,"delete"])->middleware('auth:sanctum');
+Route::get('/chatroom/detail',[ChatRoomController::class,'chatroom_detail'])->middleware('auth:sanctum');
 
 Route::post('/chatroom/belongsto/user/index',[ChatroomBelongUserController::class,"chatroom_belongs_index"])->middleware('auth:sanctum');
 Route::get('/chatroom/index',[ChatroomBelongUserController::class,"index"])->middleware('auth:sanctum');
@@ -53,6 +55,7 @@ Route::post('/directmessage/create',[MessageController::class,"store"])->middlew
 Route::get('/directmessage/get',[MessageController::class,"show"])->middleware('auth:sanctum');
 Route::put('/directmessage/update',[MessageController::class,"update"])->middleware('auth:sanctum');
 Route::delete('/directmessage/delete',[MessageController::class,"store"])->middleware('auth:sanctum');
+Route::get('/directmessage/message/detail/{message_id}',[MessageController::class,'message_detail'])->middleware('auth:sanctum');
 
 
 // Route::get('/user', function (Request $request) {

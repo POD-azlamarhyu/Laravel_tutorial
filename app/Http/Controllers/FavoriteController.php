@@ -35,7 +35,6 @@ class FavoriteController extends Controller
                 "message"=>"added favorite."
             ]);
         }
-
     }
 
     public function is_exist_favorite(Request $request)
@@ -189,7 +188,6 @@ class FavoriteController extends Controller
             ->orderBy('tw.created_at')
             ->get();
             
-            return ;
             return response()->json([
                 "result"=>"success",
                 "data"=>$data
